@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShoppingDataSQLRunner</title>
+</head>
+<body>
+
+<h1>SQL Runner For Shopping DataBase</h1>
+<h1>Hello, How are you doing today?</h1>
+
+<form method="post">
+  {%csrf_token %}
+  Query : <input type="text" name="name" value = "Please Enter Customer ID">
+  <button type="submit">Query Submit</button>
+</form>
+
+<hr>
+<p> The customer number {{NothingHere}} was not in the database. Try again!</p>
+
+<!-- This is where the ResultSet is printed out! -->
+
+{{myresult}}
+<hr>
+<!-- This is where the ResultSet is printed out, but in a more user-friendly format -->
+{% for i in myresult %}
+    <div>{{i.customer_id}} - {{i.product_id}} - {{i.quantity}} - {{i.total_price}}</div>
+{% endfor%}
+
+</body>
+</html>

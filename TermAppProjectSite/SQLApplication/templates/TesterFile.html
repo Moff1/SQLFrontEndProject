@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TesterPage</title>
+</head>
+<body>
+<h1>Home_Tester</h1>
+<h1>Hello Moffset</h1>
+
+<form method="post">
+
+    {%csrf_token %}
+    Name : <input type="text" name="name" value = "default">
+    <button type="submit">Submit</button>
+</form>
+
+<h1>You have entered the Following 'Query' {{data}}</h1>
+
+</body>
+</html>
